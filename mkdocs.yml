@@ -1,0 +1,13 @@
+# Project information
+site_name: 'GST103: Data Acquisition and Management'
+site_description: 'GST 103: Data Acquisition and Management'
+
+theme:
+  name: 'readthedocs'
+
+ # palette:
+ #   primary: 'light green'
+ #   accent: 'green'
+
+#markdown_extensions:
+#  - admonition
