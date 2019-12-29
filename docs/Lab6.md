@@ -1,6 +1,5 @@
-# GST 103: Data Acquisition and Management 
-## Lab 6 - Data Sources
-### Objective – Learn to Map Address Data via Geocoding
+# Lab 6 - Data Sources
+## Objective – Learn to Map Address Data via Geocoding
 
 Document Version: 4/26/2015
 
@@ -20,7 +19,7 @@ This document continues to be modified and improved by generous public contribut
 
 ---
 
-### 1. Introduction
+## 1. Introduction
 
 Data collection is an important task in the creation of a GIS. Data can come from several sources such as GPS receivers, text files, or from the internet as shapefiles. You may even receive a coverage. The GIS can manage all of this data. We may receive data with an address that we want to display on a map. We can geolocate items using an address via a process known as geocoding. This tool helps us take point features from a text file and tie it to an address by the use of an address.
 
@@ -29,10 +28,10 @@ This lab includes the following tasks:
 + Task 1 Geocoding
 + Task 2 Build a Map
 
-### 2 Objective: Learn to Map Address Data via Geocoding
+## 2 Objective: Learn to Map Address Data via Geocoding
 The objective of this lab is to learn how to geocode address based data provided in a text file and create a map from various data sources.
 
-### Task 1 Geocoding
+## Task 1 Geocoding
 
 In a geocoding operation, address data contained in a table or text file are mapped against a street network dataset. The street network dataset needs to have attribute fields for address ranges on the left and right side of each road segment. Mapping addresses has many applications including mapping: the customer base for a store, members of an organization, public health records, and crime locations. Once mapped, the points can be used to generate density surfaces and can be tied to parcels of land. This can be important in cadastral information systems.
 
@@ -48,7 +47,7 @@ In a geocoding operation, address data contained in a table or text file are map
 9. Find the plugin named mmqgis and click Install plugin (shown in figure below).
 10. When complete click Close.
 
-![Installing the MMQGIS Plugin](figures/Installing_the_MMQGIS_Plugin.png "Installing the MMQGIS Plugin")
+![Installing the MMQGIS Plugin](figures/Lab6/Installing_the_MMQGIS_Plugin.png "Installing the MMQGIS Plugin")
 
 MMQGIS appears as a separate menu in QGIS Desktop.
 
@@ -68,15 +67,15 @@ MMQGIS appears as a separate menu in QGIS Desktop.
 
 	f. Click OK to run. This process may take several minutes. The status of the geocoding will display in the bottom-left corner of QGIS Desktop.
 
-![Geocode_from_Street_Layer](figures/Geocode_from_Street_Layer.png "Geocode_from_Street_Layer")
+![Geocode_from_Street_Layer](figures/Lab6/Geocode_from_Street_Layer.png "Geocode_from_Street_Layer")
 
 12. When complete the new layer is added to QGIS Desktop. You should get 199 out of the 203 addresses to be geocoded (shown in figure below).
 
-![Geocoding_by_Street_Result](figures/Geocoding_by_Street_Result.png "Geocoding_by_Street_Result")
+![Geocoding_by_Street_Result](figures/Lab6/Geocoding_by_Street_Result.png "Geocoding_by_Street_Result")
 
 13. Open the attribute table for Geocoded_Addresses. All of the attributes from the CSV file are brought in as attributes to the output shapefile.
 14. Right click on the Geocoded_Addresses layer and choose Zoom to Layer. All of the points look to be well mapped.
-15. Zoom into a concentration of points and then zoom in farther to some within the city. Use the Identify tool![Identify tool](figures/Identify_tool.png "Identify tool") to inspect the mapped points and the roads to ensure that the operation was successful. Never take a GIS operation for granted. Check your results with a critical eye.
+15. Zoom into a concentration of points and then zoom in farther to some within the city. Use the Identify tool![Identify tool](figures/Lab6/Identify_tool.png "Identify tool") to inspect the mapped points and the roads to ensure that the operation was successful. Never take a GIS operation for granted. Check your results with a critical eye.
 16. You can also add the Geocoded_Addresses_Not_Found.csv file to QGIS Desktop and study it to try and determine why the four records did not find a match.
 17. These are good geocoding results. Now you will try the other method available: geocode using the Google Geocoder.
 18. From the menu bar choose MMQGIS | Geocode | Geocode CSV with Google/OpenStreetMap.
@@ -101,19 +100,19 @@ MMQGIS appears as a separate menu in QGIS Desktop.
 
 	i. Click OK to run. Again, this may take a while and progress is displayed in the lower-left corner of QGIS Desktop.
 
-![Web_Service_Geocode](figures/Web_Service_Geocode.png "Web_Service_Geocode")
+![Web_Service_Geocode](figures/Lab6/Web_Service_Geocode.png "Web_Service_Geocode")
 
 19. This may take several minutes to run and in part depends on the speed of your internet connection.
 20. This technique matches all 203 records. The figure below shows the Google Addresses in yellow and the street layer geocoded addresses in red. Note that they differ!
 
-![Google Addresses in Yellow](figures/Google_Addresses_in_Yellow.png "Google Addresses in Yellow")
+![Google Addresses in Yellow](figures/Lab6/Google_Addresses_in_Yellow.png "Google Addresses in Yellow")
 
 21. Right-click on the Google_Addresses.shp and choose Zoom to Layer. These, too, seem to be well mapped. Although there is a discernible difference between the address point locations identified by the two tools. The Google_notfound.csv is an empty text file since Google found a match for each record.
 23. Again, zoom in to some sample address points and spot check the results to determine if the points are on the street they should be. Can you determine which output is more accurate?
 24. Congratulations! You have created points from a table of addresses!
 25. Save your map as Lab_6.qgs.
 
-### Task 2 Build a Map
+## Task 2 Build a Map
 
 At the end of your data collection, a product is usually required. In this case, a map is necessary to complete the lab. Data from several data sources have been downloaded and included in your lab data folder.	
 
@@ -125,17 +124,17 @@ At the end of your data collection, a product is usually required. In this case,
 6. If you need a refresher on how to compose a map you can refer to GST 101 Lab 4.
 7. Submit a jpg of your final map.
 
-### 3. Conclusion
+## 3. Conclusion
 
 In this lab you learned how to geocode address data using the MMQGIS plugin. Geocoding is an important vector data creation process. There are many data organized by address. Mapping such data allows you to generate density maps, measure proximity of points, and perhaps even characterize the neighborhoods the points fall in with socioeconomic data from the Census. Maps are often part of a final product of a GIS project or analysis. Data can come from various sources and be manipulated to fit the project. The data should be normalized in respect to the file format, spatial extent and coordinate reference system. Remember GIS data are often free, and there is a wealth of it on the internet. Just use it with caution and check the accuracy of the data if you can. One should explore the data as much as possible before using it and endorsing it.
 
-### 4. Discussion Questions
+## 4. Discussion Questions
 
 1. Which tool created better output, the Geocoding by Street Layer or the Google Geocoder?
 2. What are the advantages and disadvantages of having all the data on the internet?
 3. What are some applications of geocoding? Describe.
 
-### 5. Challenge Assignment (optional)
+## 5. Challenge Assignment (optional)
 
 Use the data in the Lab_6 Data\\Challenge folder to compose a map to do with pollutants in Nueces County, Texas. The data include:
 

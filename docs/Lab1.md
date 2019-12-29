@@ -1,6 +1,5 @@
-# GST 103: Data Acquisition and Management 
-## Lab 1 - Reviewing the Basics of Geospatial Data
-### Objective – Explore and Understand Geospatial Data Models and File Formats
+# Lab 1 - Reviewing the Basics of Geospatial Data
+## Objective – Explore and Understand Geospatial Data Models and File Formats
 
 Document Version: 4/26/2015
 
@@ -20,7 +19,7 @@ This document continues to be modified and improved by generous public contribut
 
 ---
 
-### 1. Introduction
+## 1. Introduction
 
 There are two main data models for GIS data: vector and raster. Additionally, GIS data comes in many file formats. When gathering data for a project, it is common to acquire data from several sources. Therefore, it is also common for the data to be in several different file formats. In this lab, you will review GIS data models and file formats. 
 
@@ -29,16 +28,16 @@ This lab includes the following tasks:
 + Task 1 GIS Data Models
 + Task 2 GIS File Formats
 
-###  2. Objective: Explore and Understand Geospatial Data Models and File Formats
+##  2. Objective: Explore and Understand Geospatial Data Models and File Formats
 
 The objective of this lab is to explore and understand geospatial data models and file formats.
 
-### Task 1 GIS Data Models
+## Task 1 GIS Data Models
 
 This task will be a review of the data commonly stored in the vector and raster data models. You will explore the Lab 1 data and answer some questions.
 
 2. Open QGIS Desktop.
-3. Use the Add Raster Layer button ![Add Raster Layer Button](figures/Add_Raster_Layer_Button.png "Add Raster Layer Button") to add the 35106-B4.dem file from the lab data directory.
+3. Use the Add Raster Layer button ![Add Raster Layer Button](figures/Lab1/Add_Raster_Layer_Button.png "Add Raster Layer Button") to add the 35106-B4.dem file from the lab data directory.
 
 **Question # 1 – Is this a continuous or categorical raster?**
 
@@ -52,7 +51,7 @@ This task will be a review of the data commonly stored in the vector and raster 
 
 **Question # 4 – Is this a continuous or categorical raster?**
 
-6. Use the Add Vector Layer button ![Add Vector Layer Button](figures/Add_Vector_Layer_Button.png "Add Vector Layer Button") and add both Road.shp and Trail.shp shapefiles to the map canvas. 
+6. Use the Add Vector Layer button ![Add Vector Layer Button](figures/Lab1/Add_Vector_Layer_Button.png "Add Vector Layer Button") and add both Road.shp and Trail.shp shapefiles to the map canvas. 
 
 **Question # 5 – What is the coordinate reference system for the Road.shp layer?**
 
@@ -60,7 +59,7 @@ This task will be a review of the data commonly stored in the vector and raster 
 
 **Question # 7 – What are the two easiest methods in QGIS Desktop, for answering question number 6?**
 
-### Task 2 GIS Data File Formats
+## Task 2 GIS Data File Formats
 
 There are many different file formats commonly used in GIS. Some formats are designed to store vector data and some raster data, while others contain a myriad of other types of information. In this task, you will explore the file formats included with the lab data.
 
@@ -81,7 +80,7 @@ You can see that it is a line layer with 15953 features and that it is in UTM. H
 4. Open QGIS Desktop and click on the Add vector data button to open the Add vector layer dialog.
 5. Up to this point, you have always used the default Source type of File. Now switch the Source type to Directory and the Source Type to Arc/Info Binary Coverage (see figure below).
 
-![Add Vector Vayer](figures/Add_vector_layer.png "Add Vector Layer")
+![Add Vector Vayer](figures/Lab1/Add_vector_layer.png "Add Vector Layer")
 
 6. Click the Browse button and navigate to the Lab 1 Data folder.
 7. Select the vegetation folder (do not enter it just select it) and click Select Folder.  
@@ -89,11 +88,11 @@ You can see that it is a line layer with 15953 features and that it is in UTM. H
 9. The Select vector layers to add… window opens. Here you are being asked to choose which components of the coverage to add to QGIS. This is because of a special property that coverages have: they can store multiple geometries. While a single shapefile stores either point, line, or polygon geometry, a single coverage can store all three geometries. This vegetation dataset has two polygon components (PAL & landfire_evt) a line component (Arc), and a point component (CNT). 
 10. Select the landfire_evt layer and choose OK (see figure below).
 
-![Select Vector Layers to Add](figures/Select_vector_layers_to_add.png "Select Vector Layers to Add")
+![Select Vector Layers to Add](figures/Lab1/Select_vector_layers_to_add.png "Select Vector Layers to Add")
 
 11. The layer is added to QGIS (see figure below). This is a vector version of the LandFire_EVT raster layer.
 
-![Vegetation Coverage in GIS](figures/Vegetation_Coverage_in_QGIS.png "Vegetation Coverage in QGIS")
+![Vegetation Coverage in GIS](figures/Lab1/Vegetation_Coverage_in_QGIS.png "Vegetation Coverage in QGIS")
 
 **Question # 9 – What attribute column would you use to map these vegetation types using a Categorical renderer?**
 
@@ -102,7 +101,7 @@ You can see that it is a line layer with 15953 features and that it is in UTM. H
 12. Open QGIS Browser again and navigate to the lab data folder.
 13. Select the Data folder so that the contents are visible in the Param tab (in the figure below). Notice the Recreation_Site_pt.kmz file. This does not appear as a GIS layer in the layer tree. KMZ is compressed KML (Keyhole Markup Language). This is the native format for Google Earth and is a very common geospatial file format. In order for QGIS Desktop to read this data the KMZ file must be decompressed.
 
-![Lab 1 Data in QGIS Browser](figures/Lab_1_Data_in_QGIS_Browser.png "Lab 1 Data in QGIS Browser")
+![Lab 1 Data in QGIS Browser](figures/Lab1/Lab_1_Data_in_QGIS_Browser.png "Lab 1 Data in QGIS Browser")
 
 13. Uncompress/unzip Recreation_Site_pt.kmz.
 
@@ -111,22 +110,22 @@ You can see that it is a line layer with 15953 features and that it is in UTM. H
 14. In QGIS Desktop, click the Add Vector Layer button. Set the Source type to File, and click Browse. Navigate to the Lab 1 Data folder and change the file format filter in the lower right corner to Keyhole Markup Language (KML) (in the figure below).
 15. Select the Recreation_Site_pt.kml file and click Open to add this to QGIS Desktop.
 
-![Adding KML Data to QGIS Desktop](figures/Adding_KML_Data_to_QGIS_Desktop.png "Adding KML Data to QGIS Desktop")
+![Adding KML Data to QGIS Desktop](figures/Lab1/Adding_KML_Data_to_QGIS_Desktop.png "Adding KML Data to QGIS Desktop")
 
 15. Click Open again. You are presented with the Select vector layers to add… window. There are many different feature layers within this KML file.
 16. Select Picnic site and Trailhead (hold the Control key to select multiple entries) and click OK (selections shown in the figure below).
 
-![Adding KML Layers to QGIS Desktop](figures/Adding_KML_Layers_to_QGIS_Desktop.png "Adding KML Layers to QGIS Desktop")
+![Adding KML Layers to QGIS Desktop](figures/Lab1/Adding_KML_Layers_to_QGIS_Desktop.png "Adding KML Layers to QGIS Desktop")
 
-### 3 Conclusion
+## 3 Conclusion
 In this lab, you reviewed the raster and vector data models. You have explored several file formats and have been introduced to two new vector formats: the coverage and Keyhole Markup Language (KML).
 
-### 4 Discussion Questions
+## 4 Discussion Questions
 
 1. What are the strengths of both the vector and raster data models?
 2. List the vector and raster file formats you are now familiar with.
 3. How does a coverage differ from a shapefile?
 
-### 5 Challenge Assignment
+## 5 Challenge Assignment
 
 Convert the KML and coverage data to shapefiles.

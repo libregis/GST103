@@ -1,6 +1,5 @@
-# GST 103: Data Acquisition and Management 
-## Lab 4 - Spatial Data Quality
-### Objective – Learn to Assess Data Quality, Work with Metadata and Aggregate Data
+# Lab 4 - Spatial Data Quality
+## Objective – Learn to Assess Data Quality, Work with Metadata and Aggregate Data
 
 Document Version: 5/4/2015
 
@@ -20,7 +19,7 @@ This document continues to be modified and improved by generous public contribut
 
 ---
 
-### 1. Introduction
+## 1. Introduction
 
 Spatial data is becoming more common and readily available via the internet. However, the accuracy of the data is always a concern. As we are experiencing a growth in data availability, we should choose our sources wisely. When it comes to data accuracy, not only do we look at the spatial component, but the attribute component as well. Metadata is becoming a large component to data and it is a key factor in determining the completeness of data.
 
@@ -30,16 +29,16 @@ This lab includes the following tasks:
 + Task 2 Metadata
 + Task 3 Data Aggregation
 
-### 2. Objective: Learn to Assess Data Quality, Work with Metadata and Aggregate Data
+## 2. Objective: Learn to Assess Data Quality, Work with Metadata and Aggregate Data
 
 This lab focuses on data and the accuracy thereof. You will be looking at the metadata and the standards of the metadata that some datasets require and have. You will also look at assessing the accuracy of the data and if it is usable or not.
 
-###Task 1 Exploring Data Accuracy
+##Task 1 Exploring Data Accuracy
 
 Data accuracy is an important concept and this goes for the spatial data as well as the attribute data. The spatial and attribute data can be edited and changed, but what if it is a noted problem in the data? Can we overlook certain points in the data that we know have been captured erroneously? We must be aware of the errors that are inherent in the data and the fixes that are provided. In this first task, you will create a point layer of shipwrecks from a text file containing the X and Y coordinates. You will then assess its accuracy.
 
 2. Open QGIS Desktop and add the great_lakes.shp shapefile from the Lab Data directory.
-3. Click the Add Delimited Text Layer ![Delimited text layer button](figures/Delimited_text_layer_button.png "Delimited text layer button")  button. Fill out the form as in the figure below.
+3. Click the Add Delimited Text Layer ![Delimited text layer button](figures/Lab4/Delimited_text_layer_button.png "Delimited text layer button")  button. Fill out the form as in the figure below.
 
 	a. File Name: Browse to the lab data folder and select shipwrecks.csv
 
@@ -57,7 +56,7 @@ Data accuracy is an important concept and this goes for the spatial data as well
 
 	h. Click OK
 
-![Create a Layer From a Delimited Text File](figures/Create_a_Layer_from_a_Delimited_Text_File.png "Create a Layer From a Delimited Text File")
+![Create a Layer From a Delimited Text File](figures/Lab4/Create_a_Layer_from_a_Delimited_Text_File.png "Create a Layer From a Delimited Text File")
 
 4. The Coordinate Reference System Selector will appear. Choose WGS 84 (EPSG:4326) and click OK.
 4. Right-click on the Shipwrecks layer in the Layers panel and choose Zoom to layer.
@@ -73,7 +72,7 @@ Data accuracy is an important concept and this goes for the spatial data as well
 8. The data points should all fall near the western end of Lake Superior.
 9. One must always be careful about data and not take their accuracy for granted. It is your responsibility to discover and fix errors. You cannot rely on the software to understand such mistakes.
 
-### Task 2 Metadata
+## Task 2 Metadata
 
 In this task, you will be looking at the metadata section of spatial data. When data is purchased, or published online by an agency or organization, we expect to have a complete dataset. This includes the spatial data, the attribute data and the metadata. Metadata is data about data, and is the one sure way we can understand the source, how it was created, what scale it was created at, what the spatial reference is, what kinds of accuracy can we expect, etc. All datasets have some error associated with them. After all, they are simplified models of the real world. 
 
@@ -88,18 +87,18 @@ However, actual metadata is a U.S. Federal standard maintained by the Federal Ge
 6. Click on the All tab and search for Meta.
 7. Locate the Metatools plugin and install it (shown in figure below). Close the Plugins window.
 
-![Installing the Metatools Plugin](figures/Installing_the_Metatools_Plugin.png "Installing the Metatools Plugin")
+![Installing the Metatools Plugin](figures/Lab4/Installing_the_Metatools_Plugin.png "Installing the Metatools Plugin")
 
 5. This is an experimental plugin at this point. However, it is well conceived and very useful. It loads a toolbar with several tools (shown in figure below). 
 
-![Metatools Toolbar](figures/Metatools_Toolbar.png "Metatools Toolbar")
+![Metatools Toolbar](figures/Lab4/Metatools_Toolbar.png "Metatools Toolbar")
 
 *Note*: If you are working on a Windows computer you will need to open the Python Console for the tool to run. To do this click Plugins | Python Console. Other operating systems such as MAC OSX and Linux may not require this step.
 
-7. Select the tl_2010_35_place10 in the Layers panel and click the View metadata ![View metafdata button](figures/View_metadata_button.png "View matadata button")  button.
+7. Select the tl_2010_35_place10 in the Layers panel and click the View metadata ![View metafdata button](figures/Lab4/View_metadata_button.png "View matadata button")  button.
 8. The Metadata Viewer will open (shown in figure below).
 
-![Metadata Viewer](figures/Metadata_Viewer.png "Metadata Viewer")
+![Metadata Viewer](figures/Lab4/Metadata_Viewer.png "Metadata Viewer")
 
 Metatools parses the metadata file and presents it in an easily readable format.
 
@@ -123,21 +122,21 @@ The FGDC Metadata Standard contains six major sections as seen below.
 13. This is certainly harder to look at than the parsed display in Metatools. Fortunately, all metadata files have the same sections in the same order. This is due to having a standard.
 14. Scroll down past the abstract and you will find a tag called dataqual. This section contains the Logical Consistency Report, which details the tests used to determine the data quality (shown in figure below).
 
-![Logical Consistency Report in Web Browser](figures/Logical_Consistency_Report_in_Web_Browser.png "Logical Consistency Report in Web Browser")
+![Logical Consistency Report in Web Browser](figures/Lab4/Logical_Consistency_Report_in_Web_Browser.png "Logical Consistency Report in Web Browser")
 
 15. Slightly farther down you will find the <attr> section. This section details all of the attribute columns.
 16. Close the web browser with the metadata XML displayed.
 17. Close the Metadata Viewer in QGIS Desktop.
-18. Click on the Edit Metadata  ![Edit Metadata button](figures/Edit_Metadata_button.png "Edit Metadata button") button to open the Metadata editor. Expand metadata and you will see abbreviated listings of the six FGDC metadata sections.(see figure below).
+18. Click on the Edit Metadata  ![Edit Metadata button](figures/Lab4/Edit_Metadata_button.png "Edit Metadata button") button to open the Metadata editor. Expand metadata and you will see abbreviated listings of the six FGDC metadata sections.(see figure below).
 
-![Metatools Metadata Editor](figures/Metatools_Metadata_Editor.png "Metatools Metadata Editor")
+![Metatools Metadata Editor](figures/Lab4/Metatools_Metadata_Editor.png "Metatools Metadata Editor")
 
 19. Expand dataqual. If you click on an entry such as logic you will see that entry. You can use this editor to edit the text and save the metadata. 
 20. Close the Metadata Editor.
 
-The Import and Export buttons ![Import Export buttons](figures/Import_Export_buttons.png "Import Export buttons") allow you to save out a copy of the metadata. Many organizations will set up a metadata template with items that will be the same from metadata file to metadata file, such as contact information. If you have such a template, you can use the Import tool to import the metadata template. The Metadata Editor can then be used to complete the record.
+The Import and Export buttons ![Import Export buttons](figures/Lab4/Import_Export_buttons.png "Import Export buttons") allow you to save out a copy of the metadata. Many organizations will set up a metadata template with items that will be the same from metadata file to metadata file, such as contact information. If you have such a template, you can use the Import tool to import the metadata template. The Metadata Editor can then be used to complete the record.
 
-### Task 3 Data Aggregation
+## Task 3 Data Aggregation
 
 Data aggregation is the process where data is joined, merged, or generalized to suit a need. This may be done in such a way to protect the information at a lower level.
 
@@ -146,22 +145,22 @@ Data aggregation is the process where data is joined, merged, or generalized to 
 3. From the menu bar choose Vector | Geoprocessing Tools | Dissolve.
 4. Set up the dissolve tool to dissolve based on the SubRegion attribute field. Name the output Sub_Regions.shp (shown in figure below).
 
-![Dissolve](figures/Dissolve.png "Dissolve")
+![Dissolve](figures/Lab4/Dissolve.png "Dissolve")
 
 The result is an example of data aggregation. All the data in the map will be mapped using those regions (shown in the figure below). In this scenario, all data by country will be aggregated to the sub region level. 
 
-![Data Aggregation Via a Dissolve](figures/Data_Aggregation_via_a_Dissolve.png "Data Aggregation Via a Dissolve")
+![Data Aggregation Via a Dissolve](figures/Lab4/Data_Aggregation_via_a_Dissolve.png "Data Aggregation Via a Dissolve")
 
-### 3. Conclusion
+## 3. Conclusion
 Spatial and attribute data accuracy is important. Having a complete data set and keeping track of all the edits and errors is also important. Metadata provides background on the data provided to us. It supplies us with vital information regarding the use and resolution of the data. If you read the metadata, you may be able to determine that the data is not a good fit for your project before trying to edit and manipulate it. Data aggregation is a way to abstract the data and to remove data levels from the data. In task 3, you changed the lowest level in the data from countries to sub regions. This is important but we need to be aware of the consequences of our actions when mapping data and how the accuracy is changed when we manipulate it.
 
-### 4. Discussion Questions
+## 4. Discussion Questions
 
 1. Does metadata need to be written for all datasets? Explain.
 2. Why do we need a metadata standard?
 3. How can data aggregation problematic in a real world mapping scenario?
 
-### 5. Challenge Assignment (optional)
+## 5. Challenge Assignment (optional)
 Add the NM_Game_Management_Units shapefile to QGIS. View the metadata. Take note of the Horizontal Coordinate System. 
 
 What is provided as the Positional Accuracy?
